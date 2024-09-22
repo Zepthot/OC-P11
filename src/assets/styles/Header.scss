@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 45px 100px;
+
+  &__nav__list {
+    display: flex;
+    flex-direction: row;
+    gap: 57px;
+
+    &__item {
+      list-style-type: none;
+
+      &__link {
+        text-decoration: none;
+        font-weight: 540;
+        font-size: 24px;
+        color: #333333;
+      }
+
+      .active {
+        border-bottom: #333333 1px solid;
+      }
+    }
+  }
+}

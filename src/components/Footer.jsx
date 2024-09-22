@@ -1,10 +1,11 @@
 // import libraries
-import React from "react";
+
 // import components
 
 // import utils
 
 // import assets
+import logoFooter from "../assets/images/logo-w.svg";
 import "../assets/styles/Footer.scss";
 
 /**
@@ -15,8 +16,13 @@ import "../assets/styles/Footer.scss";
 
 export default function Footer() {
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
+    <footer className='footer'>
+      <img
+        src={logoFooter}
+        alt='Kasa écrit en blanc et stylisé avec le logo'
+        className='footer__logo'
+      />
+      <p className='footer__rights'>© 2020 Kasa. All rights reserved</p>
+    </footer>
   );
 }
