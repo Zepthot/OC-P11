@@ -1,10 +1,11 @@
 // import libraries
 import React from "react";
 // import components
-
+import Section from "../../components/Section";
 // import utils
 
 // import assets
+import imageAbout from "../../assets/images/about.png";
 import "../../assets/styles/About.scss";
 
 /**
@@ -15,8 +16,8 @@ import "../../assets/styles/About.scss";
 
 export default function About() {
   return (
-    <div>
-      <h1>About page</h1>
+    <div className='about'>
+      <Section image={imageAbout} alt='Une forêt en montagne' />
     </div>
   );
 }
