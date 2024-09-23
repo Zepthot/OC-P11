@@ -16,9 +16,9 @@ import "../assets/styles/Section.scss";
 
 export default function Section({ image, alt, title }) {
   return (
-    <div className='section'>
+    <section className='section'>
       <img src={image} alt={alt} className='section__image' />
       {title && <h1 className='section__title'>{title}</h1>}
-    </div>
+    </section>
   );
 }
