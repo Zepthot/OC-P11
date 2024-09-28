@@ -1,3 +1,17 @@
 .home {
   margin: 50px 100px;
+
+  &__gallery {
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    margin: 43px 0 50px;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px 60px;
+      padding: 56px 0 43px;
+    }
+  }
 }

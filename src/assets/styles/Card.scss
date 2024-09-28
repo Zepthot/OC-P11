@@ -1,0 +1,32 @@
+.card {
+  width: 340px;
+  height: 340px;
+
+  &__item {
+    list-style-type: none;
+
+    &__link {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+
+      &__cover {
+        object-fit: cover;
+        width: 340px;
+        height: 340px;
+        border-radius: 10px;
+      }
+
+      &__title {
+        font-size: 18px;
+        font-weight: 700;
+        position: absolute;
+        color: white;
+        line-height: 26px;
+        max-width: 340px;
+        padding-left: 20px;
+      }
+    }
+  }
+}
