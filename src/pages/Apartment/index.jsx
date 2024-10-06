@@ -1,6 +1,6 @@
 // import libraries
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 // import components
 import Carousel from "../../components/Carousel";
@@ -20,10 +20,17 @@ import "../../assets/styles/Apartment.scss";
 
 export default function Apartment() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const apartment = data.find((item) => item.id === id);
 
+  useEffect(() => {
+    if (!apartment) {
+      navigate("/error");
+    }
+  }, [apartment, navigate]);
+
   if (!apartment) {
-    console.log("TODO Navigate to /error");
+    return null;
   }
 
   return (
