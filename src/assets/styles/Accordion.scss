@@ -6,10 +6,10 @@
     padding: 10px 20px 10px 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &__label {
       font-weight: 700;
-      font-size: 24px;
       color: #fafafa;
     }
 
@@ -37,13 +37,9 @@
   &__content {
     overflow: hidden;
     transition: height 0.5s ease;
-
-    &__text {
-      font-size: 18px;
-      background-color: #f6f6f6;
-      border-radius: 5px;
-      margin: 0;
-      padding: 20px;
-    }
+    font-size: 18px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    margin: 0;
   }
 }

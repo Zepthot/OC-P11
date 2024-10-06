@@ -5,7 +5,6 @@ import React from "react";
 // import utils
 
 // import assets
-import "../assets/styles/Badge.scss";
 
 /**
  * Component description.
@@ -16,8 +15,8 @@ import "../assets/styles/Badge.scss";
 
 export default function Badge({ title }) {
   return (
-    <div className='badge'>
-      <li className='badge__title'>{title}</li>
+    <div>
+      <li>{title}</li>
     </div>
   );
 }

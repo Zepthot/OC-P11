@@ -15,7 +15,7 @@ import "../assets/styles/Accordion.scss";
  * @returns {JSX.Element} - Component rendering.
  */
 
-export default function Accordion({ label, content }) {
+export default function Accordion({ label, children, fontSize }) {
   const [open, setOpen] = useState(false);
   const contentRef = useRef(null);
 
@@ -34,7 +34,12 @@ export default function Accordion({ label, content }) {
   return (
     <div className='accordion'>
       <div className='accordion__header'>
-        <span className='accordion__header__label'>{label}</span>
+        <span
+          className='accordion__header__label'
+          style={{ fontSize: fontSize }}
+        >
+          {label}
+        </span>
         <button
           onClick={toggleAccordion}
           className={
@@ -53,13 +58,7 @@ export default function Accordion({ label, content }) {
           height: open ? `${contentRef.current.scrollHeight}px` : "0px",
         }}
       >
-        <p
-          className={
-            open ? "accordion__content__text show" : "accordion__content__text"
-          }
-        >
-          {content}
-        </p>
+        {children}
       </div>
     </div>
   );
