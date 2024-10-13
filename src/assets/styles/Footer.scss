@@ -16,3 +16,13 @@
     font-size: 24px;
   }
 }
+
+@media (max-width: 375px) {
+  .footer {
+    &__rights {
+      font-size: 14px;
+      width: 130px;
+      text-align: center;
+    }
+  }
+}

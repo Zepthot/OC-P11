@@ -16,3 +16,15 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .about {
+    margin: 0 20px 20px 20px;
+    gap: 20px;
+
+    &__accordion {
+      padding: 0;
+      gap: 20px;
+    }
+  }
+}

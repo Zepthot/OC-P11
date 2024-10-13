@@ -1,8 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 45px 100px;
-  max-width: 1240px;
+  padding: 45px 100px;
 
   &__nav__list {
     display: flex;
@@ -21,6 +20,29 @@
 
       .active {
         border-bottom: #333333 1px solid;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    padding: 20px;
+    align-items: center;
+    gap: 43px;
+
+    &__logo {
+      height: 46px;
+    }
+
+    &__nav__list {
+      align-items: center;
+      padding: 0;
+      gap: 26px;
+
+      &__item__link {
+        font-size: 12px;
+        text-transform: uppercase;
       }
     }
   }

@@ -41,5 +41,28 @@
     background-color: #f6f6f6;
     border-radius: 5px;
     margin: 0;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 375px) {
+  .accordion {
+    &__header {
+      height: 30px;
+      padding: 0 10px;
+      border-radius: 5px;
+
+      &__label {
+        font-size: 13px !important;
+      }
+
+      &__button {
+        font-size: 24px;
+      }
+    }
+
+    &__content {
+      font-size: 12px;
+    }
   }
 }

@@ -2,6 +2,7 @@
   display: flex;
   position: relative;
   width: 100%;
+  max-width: 1240px;
 
   &__images {
     height: 415px;
@@ -60,5 +61,28 @@
 
   &__index:hover {
     cursor: default;
+  }
+}
+
+@media (max-width: 375px) {
+  .carousel {
+    width: 335px;
+
+    &__images {
+      height: 255px;
+
+      &__item__image {
+        width: 400px;
+        height: 300px;
+      }
+    }
+
+    &__button {
+      font-size: 36px;
+    }
+
+    &__index {
+      display: none;
+    }
   }
 }

@@ -17,7 +17,11 @@ import "../assets/styles/Header.scss";
 export default function Header() {
   return (
     <header className='header'>
-      <img src={logoHeader} alt='Kasa coloré et stylisé avec le logo' />
+      <img
+        src={logoHeader}
+        alt='Kasa coloré et stylisé avec le logo'
+        className='header__logo'
+      />
       <nav>
         <ul className='header__nav__list'>
           <li className='header__nav__list__item'>

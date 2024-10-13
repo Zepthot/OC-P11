@@ -30,3 +30,15 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .card {
+    width: 100%;
+    height: 255px;
+
+    &__item__link__cover {
+      width: 100%;
+      height: 255px;
+    }
+  }
+}
