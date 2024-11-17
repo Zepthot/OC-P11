@@ -14,9 +14,5 @@ import React from "react";
  */
 
 export default function Badge({ title }) {
-  return (
-    <div>
-      <li>{title}</li>
-    </div>
-  );
+  return <li>{title}</li>;
 }

@@ -34,7 +34,7 @@ export default function Apartment() {
   }
 
   return (
-    <div className='apartment'>
+    <div data-testid='apartment' className='apartment'>
       <Carousel images={apartment.pictures} />
       <div className='apartment__details'>
         <div className='apartment__details__header'>
@@ -48,12 +48,11 @@ export default function Apartment() {
           </div>
           <ul className='apartment__details__header__tags'>
             {apartment.tags.map((item, index) => (
-              <li
+              <Badge
                 key={index}
                 className='apartment__details__header__tags__item'
-              >
-                <Badge title={item} />
-              </li>
+                title={item}
+              />
             ))}
           </ul>
         </div>

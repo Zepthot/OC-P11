@@ -1,5 +1,5 @@
 // import libraries
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 // import components
 
@@ -32,7 +32,7 @@ export default function Accordion({ label, children, fontSize }) {
   };
 
   return (
-    <div className='accordion'>
+    <div data-testid='accordion' className='accordion'>
       <div className='accordion__header'>
         <span
           className='accordion__header__label'
@@ -41,6 +41,7 @@ export default function Accordion({ label, children, fontSize }) {
           {label}
         </span>
         <button
+          data-testid='button'
           onClick={toggleAccordion}
           className={
             open
@@ -52,6 +53,7 @@ export default function Accordion({ label, children, fontSize }) {
         </button>
       </div>
       <div
+        data-testid='children'
         ref={contentRef}
         className='accordion__content'
         style={{

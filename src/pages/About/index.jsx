@@ -18,7 +18,7 @@ import "../../assets/styles/About.scss";
 
 export default function About() {
   return (
-    <div className='about'>
+    <div data-testid='about' className='about'>
       <Section image={imageAbout} alt='Une forêt en montagne' />
       <section className='about__accordion'>
         {data.map((item, index) => {

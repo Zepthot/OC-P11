@@ -1,4 +1,5 @@
 // import libraries
+import React from "react";
 import { NavLink } from "react-router-dom";
 // import components
 
@@ -25,12 +26,20 @@ export default function Header() {
       <nav>
         <ul className='header__nav__list'>
           <li className='header__nav__list__item'>
-            <NavLink to='/' className='header__nav__list__item__link'>
+            <NavLink
+              to='/'
+              className='header__nav__list__item__link'
+              data-testid='link-home'
+            >
               Accueil
             </NavLink>
           </li>
           <li className='header__nav__list__item'>
-            <NavLink to='/about' className='header__nav__list__item__link'>
+            <NavLink
+              to='/about'
+              className='header__nav__list__item__link'
+              data-testid='link-about'
+            >
               A propos
             </NavLink>
           </li>

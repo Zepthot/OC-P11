@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 export default function Error() {
   return (
-    <div className='error'>
+    <div data-testid='error' className='error'>
       <h1 className='error__code'>404</h1>
       <h2 className='error__text'>
         Oups! La page que vous demandez n'existe pas.

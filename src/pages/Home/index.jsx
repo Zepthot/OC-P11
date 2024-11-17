@@ -18,7 +18,7 @@ import "../../assets/styles/Home.scss";
 
 export default function Home() {
   return (
-    <div className='home'>
+    <div data-testid='home' className='home'>
       <Section
         image={imageHome}
         alt='Une falaise en bord de mer'

@@ -62,19 +62,25 @@ export default function Carousel({ images }) {
         ))}
       </ul>
       <button
+        data-testid='previous'
         className='carousel__button carousel__button--left'
         onClick={carouselPrevious}
+        aria-label='Back'
       >
         <IoIosArrowBack />
       </button>
       <button
+        data-testid='next'
         className='carousel__button carousel__button--right'
         onClick={carouselNext}
+        aria-label='Next'
       >
         <IoIosArrowForward />
       </button>
       <span className='carousel__index'>
-        {currentIndex + 1} / {images.length}
+        {images.length === 0
+          ? "0 / 0"
+          : `${currentIndex + 1} / ${images.length}`}
       </span>
     </div>
   );
