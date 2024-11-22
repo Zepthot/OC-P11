@@ -48,11 +48,7 @@ export default function Apartment() {
           </div>
           <ul className='apartment__details__header__tags'>
             {apartment.tags.map((item, index) => (
-              <Badge
-                key={index}
-                className='apartment__details__header__tags__item'
-                title={item}
-              />
+              <Badge key={index} title={item} />
             ))}
           </ul>
         </div>

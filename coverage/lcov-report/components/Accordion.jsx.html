@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">44.44% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">44.44% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -128,7 +128,9 @@
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -146,22 +148,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -194,7 +198,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// import libraries
-import { React, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 // import components
 &nbsp;
@@ -214,20 +218,20 @@ export default function Accordion({ label, children, fontSize }) {
   const [open, setOpen] = useState(false);
   const contentRef = useRef(null);
 &nbsp;
-  const toggleAccordion = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    const contentElement = <span class="cstat-no" title="statement not covered" >contentRef.current;</span>
+  const toggleAccordion = () =&gt; {
+    const contentElement = contentRef.current;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (open) {</span>
-<span class="cstat-no" title="statement not covered" >      contentElement.style.height = "0px";</span>
+    if (open) {
+      contentElement.style.height = "0px";
     } else {
-<span class="cstat-no" title="statement not covered" >      contentElement.style.height = `${contentElement.scrollHeight}px`;</span>
+      contentElement.style.height = `${contentElement.scrollHeight}px`;
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    setOpen(!open);</span>
+    setOpen(!open);
   };
 &nbsp;
   return (
-    &lt;div className='accordion'&gt;
+    &lt;div data-testid='accordion' className='accordion'&gt;
       &lt;div className='accordion__header'&gt;
         &lt;span
           className='accordion__header__label'
@@ -236,6 +240,7 @@ export default function Accordion({ label, children, fontSize }) {
           {label}
         &lt;/span&gt;
         &lt;button
+          data-testid='button'
           onClick={toggleAccordion}
           className={
             open
@@ -247,6 +252,7 @@ export default function Accordion({ label, children, fontSize }) {
         &lt;/button&gt;
       &lt;/div&gt;
       &lt;div
+        data-testid='children'
         ref={contentRef}
         className='accordion__content'
         style={{
@@ -265,7 +271,7 @@ export default function Accordion({ label, children, fontSize }) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-11-04T10:54:03.692Z
+                at 2024-11-22T13:10:56.858Z
             </div>
         <script src="../prettify.js"></script>
         <script>

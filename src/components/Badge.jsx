@@ -14,5 +14,5 @@ import React from "react";
  */
 
 export default function Badge({ title }) {
-  return <li>{title}</li>;
+  return <li className='apartment__details__header__tags__item'>{title}</li>;
 }
